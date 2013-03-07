@@ -74,8 +74,11 @@
 				$column_name = 'content_block_' . $block->code;
 
 				$field = $page->find_form_field($column_name);
-				$field->htmlPlugins .= ',advimage';
-				$field->htmlButtons1 .= ',advimage';
+				if ( $field )
+				{
+					$field->htmlPlugins .= ',advimage';
+					$field->htmlButtons1 .= ',advimage';
+				}
 			}
 		}
 
